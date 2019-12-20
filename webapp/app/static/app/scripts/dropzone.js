@@ -421,7 +421,7 @@ var Dropzone = function (_Emitter) {
         /**
          * The text used before any files are dropped.
          */
-        dictDefaultMessage: "Drop files here or click to upload",
+        dictDefaultMessage: "Drop files here to upload",
 
         /**
          * The text that replaces the default message text it the browser is not supported.
@@ -2271,7 +2271,7 @@ var Dropzone = function (_Emitter) {
   }, {
     key: "uploadFile",
     value: function uploadFile(file) {
-      // return this.uploadFiles([file]);
+      return this.uploadFiles([file]);
     }
   }, {
     key: "uploadFiles",
@@ -2502,7 +2502,7 @@ var Dropzone = function (_Emitter) {
         formData.append(dataBlock.name, dataBlock.data, dataBlock.filename);
       }
 
-      // this.submitRequest(xhr, formData, files);
+      this.submitRequest(xhr, formData, files);
     }
 
     // Transforms all files with this.options.transformFile and invokes done with the transformed files when done.
@@ -2778,7 +2778,7 @@ var Dropzone = function (_Emitter) {
   }, {
     key: "submitRequest",
     value: function submitRequest(xhr, formData, files) {
-      // xhr.send(formData);
+      xhr.send(formData);
     }
 
     // Called internally when processing is finished.
